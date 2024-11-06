@@ -6,3 +6,5 @@ stylesheet.onload = () => {
 stylesheet.onerror = () => {
   console.log("An error occurred loading the stylesheet!");
 };
+
+window.location.href = "https://the-black.carrd.co/"

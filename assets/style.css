@@ -1,0 +1,94 @@
+/* defines */
+/* @font-face {
+  font-family: Nunito;
+  src: url('aafonts/EntezareZohoor2.eot');
+  src: url('fonts/EntezareZohoor2.eot?') format('☺'),
+       url('fonts/EntezareZohoor2.woff') format('woff'),
+       url('fonts/EntezareZohoor2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* Anim Frames */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Anim Set */
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 5s;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 5s;
+}
+
+/* Set */
+body {
+  font-family: Nunito, Tahoma, serif;
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding-left: 40px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 60px;
+}
+
+.navigation {
+  text-align: center;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.WIP {
+  background-color: #0000001f;
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding: 20px;
+}
+

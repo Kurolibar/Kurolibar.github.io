@@ -30,22 +30,34 @@
   }
 }
 
+@keyframes scale {
+  0% {
+    font-weight: 100;
+  }
+
+  100% {
+    font-weight: 1000;
+  }
+}
+
 /* Anim Set */
 .fadeIn {
   animation-name: fadeIn;
-  animation-duration: 5s;
+  animation-duration: 2s;
 }
 
 .fadeOut {
   animation-name: fadeOut;
-  animation-duration: 5s;
+  animation-duration: 2s;
 }
 
 /* Set */
 body {
   font-family: Nunito, Tahoma, serif;
-  text-align: center;
+  background-color: black;
+  color: #fff;
 }
+
 h1,
 h2,
 h3,
@@ -83,6 +95,7 @@ h4 {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .WIP {
@@ -92,3 +105,24 @@ h4 {
   padding: 20px;
 }
 
+.WIP:hover {
+  font-stretch: expanded;
+  animation: 4s ease-out scale alternate infinite;
+}
+
+.title {
+  visibility: hidden;
+}
+
+#logoBlackBook {
+  position: fixed;
+  top: 20%;
+  width: 600px;
+  image-rendering: optimizeQuality;
+}
+
+#logoBlackBook:hover {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  opacity: 0;
+}

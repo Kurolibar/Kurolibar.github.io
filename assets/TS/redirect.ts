@@ -1,0 +1,1 @@
+window.location.href = "https://the-black.carrd.co/"

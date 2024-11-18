@@ -19,3 +19,6 @@ Exmaples to make use of
 Resources:
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel
 - SASS
+
+Other Pages:
+- glitch.html

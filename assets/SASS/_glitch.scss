@@ -1,0 +1,287 @@
+@use "variable" as var;
+@use "scanlines";
+$red: var.$colour-red;
+$green: var.$colour-green;
+$blue: var.$colour-blue;
+
+.g_container {
+  display: flex;
+  flex-direction: column;
+  width: 840px;
+  height: 800px;
+  gap: 3em;
+  position: relative;
+  padding: 3em;
+  box-sizing: border-box;
+  filter: blur(2px);
+}
+
+/* text */
+h2 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.g_container a {
+  font-size: 45px;
+  text-decoration: none;
+  color: inherit;
+  z-index: 5;
+}
+
+.g_container a > * {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 2em;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.row.one {
+  height: 80%;
+  width: 100%;
+}
+
+.row.two {
+  height: 20%;
+  width: 100%;
+}
+
+.column.one {
+  width: 40%;
+}
+
+.column.two {
+  width: 60%;
+}
+
+.glitch {
+  text-transform: uppercase;
+  justify-content: space-evenly;
+  height: 0px;
+  width: 0px;
+  display: none;
+}
+.text.gRed {
+  color: $red;
+}
+
+.text.gGreen {
+  color: $green;
+}
+
+.text.gBlue {
+  color: $blue;
+}
+
+@mixin sets {
+  position: absolute;
+  mix-blend-mode: screen;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  animation: 1s infinite;
+}
+
+.gRed {
+  @include sets;
+  transform: translate(4px, 4px);
+  animation-name: gRed;
+}
+
+.gGreen {
+  @include sets;
+  transform: translate(0, 0);
+  animation-name: gGreen;
+}
+
+.gBlue {
+  @include sets;
+  transform: translate(-4px, -4px);
+  animation-name: gBlue;
+}
+
+.rects.gRed,
+.rects.gGreen,
+.rects.gBlue {
+  padding: 0.5em;
+}
+
+.rect {
+  width: 100%;
+  position: relative;
+}
+
+.rect.one {
+  height: 1%;
+}
+
+.rect.two {
+  height: 2%;
+}
+
+.rect.three {
+  height: 4%;
+}
+
+.rect.four {
+  height: 8%;
+}
+
+.rect.five {
+  height: 16%;
+}
+
+.rect.six {
+  height: 32%;
+}
+.rects.gRed > * {
+  background-color: $red;
+}
+
+.rects.gGreen > * {
+  background-color: $green;
+}
+
+.rects.gBlue > * {
+  background-color: $blue;
+}
+
+.border {
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+@mixin setsborder {
+  border: 12px solid;
+}
+.border.gRed {
+  @include setsborder;
+  border-color: $red;
+}
+
+.border.gGreen {
+  @include setsborder;
+  border-color: $green;
+}
+
+.border.gBlue {
+  @include setsborder;
+  border-color: $blue;
+}
+
+.button {
+  width: 100%;
+}
+
+.button.gRed {
+  color: $red;
+  @include setsborder;
+  border-color: $red;
+}
+
+.button.gGreen {
+  color: $green;
+  @include setsborder;
+  border-color: $green;
+}
+
+.button.gBlue {
+  color: $blue;
+  @include setsborder;
+  border-color: $blue;
+}
+
+@keyframes gRed {
+  0% {
+    transform: translate(4px, 4px);
+  }
+  15% {
+    transform: translate(5px, 6px);
+  }
+  30% {
+    transform: translate(4px, 4px);
+  }
+  45% {
+    transform: translate(5px, 6px);
+  }
+  60% {
+    transform: translate(4px, 4px);
+  }
+  75% {
+    transform: translate(6px, -2px);
+  }
+  100% {
+    transform: translate(4px, 4px);
+  }
+}
+
+@keyframes gGreen {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  15% {
+    transform: translate(-1px, -2px);
+  }
+  30% {
+    transform: translate(0px, 0px);
+  }
+  45% {
+    transform: translate(-1px, -2px);
+  }
+  60% {
+    transform: translate(0px, 0px);
+  }
+  75% {
+    transform: translate(-1px, 1px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes gBlue {
+  0% {
+    transform: translate(-4px, -4px);
+  }
+  15% {
+    transform: translate(-6px, -6px);
+  }
+  30% {
+    transform: translate(-4px, -4px);
+  }
+  45% {
+    transform: translate(0px, 0px);
+  }
+  60% {
+    transform: translate(-4px, -4px);
+  }
+  75% {
+    transform: translate(-3px, -5px);
+  }
+  100% {
+    transform: translate(-4px, -4px);
+  }
+}
+
+a:hover > .gRed,
+.gGreen,
+.gBlue {
+  animation: 1s;
+  transform: translate(0, 0);
+}

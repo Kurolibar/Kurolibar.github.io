@@ -1,0 +1,17 @@
+{
+  "liveSassCompile.settings.autoprefix": [],
+  "liveSassCompile.settings.compileOnWatch": true,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/assets/SASS"
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/assets/CSS"
+    }
+  ],
+  "liveSassCompile.settings.rootIsWorkspace": true
+}

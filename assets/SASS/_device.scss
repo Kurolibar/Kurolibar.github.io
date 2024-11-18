@@ -1,0 +1,8 @@
+// Touch Screen and Mobile
+@media only screen and (hover: none) and (pointer: coarse) {
+  $device: "TouchScreen";
+}
+
+@media only screen and (hover: hover) and (pointer: fine) {
+  $device: "PC";
+}

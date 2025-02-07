@@ -13,5 +13,6 @@
       "savePath": "/assets/CSS"
     }
   ],
-  "liveSassCompile.settings.rootIsWorkspace": true
+  "liveSassCompile.settings.rootIsWorkspace": true,
+  "gitdoc.enabled": true
 }

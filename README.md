@@ -18,6 +18,12 @@ Exmaples to make use of
 - https://a24films.com/
 - http://chiptune.com/
 - https://dustinbrett.com
+- https://github.com/emmabostian/developer-portfolios
+- https://github.com/syxanash/awesome-web-desktops?tab=readme-ov-file
+- https://codepen.io/ImagineProgramming/pen/LpOJzM
+- https://codepen.io/soulwire/full/DdGRYG
+- https://codepen.io/fiorella-coitinho/pen/MWyMXLe
+- https://codepen.io/collection/AeGGxz
 
 Resources:
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel

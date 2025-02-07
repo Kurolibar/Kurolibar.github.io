@@ -14,5 +14,6 @@
     }
   ],
   "liveSassCompile.settings.rootIsWorkspace": true,
-  "gitdoc.enabled": true
+  "gitdoc.enabled": true,
+  "gitdoc.autoCommitDelay": 15000
 }
